@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="/styles/registro.css">
-    <link rel="icon" sizes="64x64" href="/favicon.png">
+    <!-- Estos links son para la fuente, se saco de google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}">
+    <link rel="icon" sizes="64x64" href="/static/Img/favicon.png">
     <title>Cua-munidad</title>
 </head>
+
 <body>
-    <h1>Bienvenido a la Cua-munidad!!</h1>
+    <header id="barra-principal">
 
-    <p> Este es un espacio para la comunidad de la UAM-C, comparte experiencias,conocimientos o cualquier cosa que sea util para la comunidad!!</p>
+        <h1>Cua-munidad</h1>
 
+        <!-- Si queremos agregar más elementos en la barra de navegación los colocaremos dentro del <nav> -->
+        <nav></nav>
+
+    </header>
     
+    <section id="inicio-form">
+        <h3>Bienvenido a la Cua-munidad!!</h3>
 
-    <a href="./registro.html">registrarse</a>
-    <a href="./Iniciar Sesion.html">iniciar sesion</a>
+        <form action="/incio-sesion" method="post">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Acceder</button>
+
+        </form>
+
+        <span>No cuentas con una sesión? <a href="/registro">Registrate</a></span>
+    </section>
+    
+    
+    <section class="main-content">
+        <p> Este es un espacio para la comunidad de la UAM-C, comparte experiencias,conocimientos o cualquier cosa que sea util para la comunidad!!</p>
+
+        <img href="" alt="">
+    </section>
+
 
 
 

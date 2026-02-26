@@ -3,15 +3,14 @@ import psycopg2 #Esta biblioteca sirve para conectar python se conecte con la BD
 
 
 app = Flask(__name__)
-
-psql = psycopg2.connect(
-    database =" ", # Coloca el nombre de tu BD 
-    user ="postgres",
-    password="", # Coloca tu contraseña
-    host="localhost",
-    port="5432"
-)
-
+  
+#psql = psycopg2.connect(
+#    database =" ", # Coloca el nombre de tu BD 
+#    user ="postgres",
+#    password="", # Coloca tu contraseña
+#    host="localhost",
+#    port="5432"
+#)
 
 
 # La función nos muestra la pagina inicial, podemos enviar parametros de ser necesario
@@ -25,13 +24,13 @@ def registro():
 
 @app.route('/iniciar-sesion')
 def iniciar_sesion():
-    return render_template('Iniciar_Sesion.html')
+    return render_template('iniciar-sesion.html')
 
 @app.route('/iniciar', methods=['POST'])
 def iniciar():
     ## Validmos que la base de datos tenga el usuario
-    user-mail = request.form[user]
-    psswrd = request.form[password]
+ #   user-mail = request.form[user]
+  #  psswrd = request.form[password]
         # cur = psql.cursor() <--- sirve para hacer acciones dentro de la bd
 
     # Creo que estas instrucciónes regresan 1 si se encuentra el dato, caso contrario nos dio 0  y podemos mandarlo alv o darle acceso
